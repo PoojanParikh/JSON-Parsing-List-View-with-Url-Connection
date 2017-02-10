@@ -44,24 +44,34 @@ public class MainActivity extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
         }
 
+        listView = (ListView) findViewById(R.id.list_view_main);
+
+        parsingJson();
+
+    }
+
+    public void parsingJson(){
+
         try {
             URL url = new URL("https://jsonplaceholder.typicode.com/posts");
 
             try {
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.connect();
 
                 InputStream stream = urlConnection.getInputStream();
 
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(stream));
                 StringBuffer stringBuffer = new StringBuffer();
 
-                while(bufferedReader.readLine()!=null){
+                String line="";
+                while((line = bufferedReader.readLine())!=null){
 
-                    stringBuffer.append(bufferedReader.readLine());
+                    stringBuffer.append(line);
 
                 }
 
-                String jsonString = bufferedReader.toString();
+                String jsonString = stringBuffer.toString();
 
                 postArrayList = new ArrayList<>();
 
@@ -102,5 +112,9 @@ public class MainActivity extends AppCompatActivity {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
+
+
+
     }
 }
