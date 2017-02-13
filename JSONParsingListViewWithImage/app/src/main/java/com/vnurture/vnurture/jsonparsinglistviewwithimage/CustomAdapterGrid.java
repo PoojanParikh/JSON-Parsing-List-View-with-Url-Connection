@@ -1,11 +1,14 @@
 package com.vnurture.vnurture.jsonparsinglistviewwithimage;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.StrictMode;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.GridView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,46 +23,103 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by VNurtureTechnologies on 13/02/17.
+ */
 
-    ArrayList<QuotesCatagory> quotesCatagoryArrayList;
+public class CustomAdapterGrid extends BaseAdapter {
 
-    GridView gridView;
-
-    String name;
-    int id;
-
-    CustomAdapterGrid customAdapterGrid;
-
-    CustomAdapterList customAdapterList;
-
+    Context context;
     int idQuotes;
-    String quote;
-
-    int cat_id;
+    ArrayList<QuotesCatagory> quotesCatagoryArrayList;
+    LayoutInflater inflater;
 
     ArrayList<Quotes> quotesArrayList;
 
     ListView listView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    CustomAdapterList customAdapterList;
 
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+    int cat_id;
+    String quote;
 
-        gridView=(GridView) findViewById(R.id.grid_view);
 
-        new MyAsyncTaskGrid().execute("https://jsonplaceholder.typicode.com/posts");
+
+    CustomAdapterGrid(Context context, ArrayList<QuotesCatagory> quotesCatagoryArrayList){
+        this.context= context;
+
+        this.quotesCatagoryArrayList = quotesCatagoryArrayList;
 
     }
 
+    @Override
+    public int getCount() {
 
-    class MyAsyncTaskGrid extends AsyncTask<String,Void,String> {
+
+        return quotesCatagoryArrayList.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return quotesCatagoryArrayList.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+    static class ViewHolder {
+
+        TextView nameTextView, idTextView;
+
+
+    }
+
+    @Override
+    public View getView(final int i, View convertView, ViewGroup viewGroup) {
+
+        listView=(ListView) convertView.findViewById(R.id.list_view);
+
+        ViewHolder holder;
+
+        if (convertView == null) {
+            holder = new ViewHolder();
+            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.single_row_grid_view, viewGroup, false);
+
+
+            holder.idTextView = (TextView) convertView.findViewById(R.id.id_text_view);
+            holder.nameTextView=(TextView) convertView.findViewById(R.id.name_text_view);
+
+            convertView.setTag(holder);
+        }
+
+        else{
+            holder = (ViewHolder) convertView.getTag();
+        }
+
+
+
+
+
+
+        holder.idTextView.setText("Id: "+String.valueOf(quotesCatagoryArrayList.get(i).getId()));
+        holder.nameTextView.setText("Name: "+ quotesCatagoryArrayList.get(i).getId());
+
+        holder.nameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               new MyAsyncTaskList().execute("http://rapidans.esy.es/test/getquotes.php?cat_id="+i);
+
+            }
+        });
+
+
+        return convertView;
+    }
+
+    /*static class MyAsyncTaskGrid extends AsyncTask<String,Void,String> {
 
         @Override
         protected void onPreExecute() {
@@ -127,24 +187,25 @@ public class MainActivity extends AppCompatActivity {
 
 
                     quotesCatagory.setId(id);
+                    quotesCatagory.setName(name);
 
                     quotesCatagoryArrayList.add(quotesCatagory);
                 }
 
-                customAdapterGrid = new CustomAdapterGrid(MainActivity.this, quotesCatagoryArrayList);
+                customAdapterList = new CustomAdapterList(context, quotesArrayList);
 
 
 
-                gridView.setAdapter(customAdapterGrid);
+                listView.setAdapter(customAdapterList);
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
         }
-    }
+    }*/
 
-    /*class MyAsyncTaskList extends AsyncTask<String,Void,String> {
+    class MyAsyncTaskList extends AsyncTask<String,Void,String> {
 
         @Override
         protected void onPreExecute() {
@@ -211,13 +272,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    quotes.setId(id);
+                    quotes.setId(idQuotes);
+                    quotes.setCat_id(cat_id);
+                    quotes.setQuotes(quote);
 
 
                     quotesArrayList.add(quotes);
                 }
 
-                customAdapterList = new CustomAdapterList(MainActivity.this, quotesArrayList);
+                customAdapterList = new CustomAdapterList(context, quotesArrayList);
 
 
 
@@ -229,5 +292,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-*/
-}
+
+
+    }
+
+
+
