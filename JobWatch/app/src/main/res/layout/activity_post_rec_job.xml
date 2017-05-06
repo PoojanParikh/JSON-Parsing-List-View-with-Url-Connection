@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nishi.jobwatch.post_rec_job">
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="59dp"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editText25"
+        android:layout_alignStart="@+id/editText25"></Spinner>
+
+    <EditText
+        android:textColorLink="#000"
+        android:id="@+id/editText25"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#000"
+        android:hint="Description"
+        android:singleLine="false"
+        android:textCursorDrawable="@null"
+        />
+
+    <EditText
+        android:hint="Contact Number"
+        android:textColor="#000000"
+        android:textColorLink="#000"
+        android:textCursorDrawable="@null"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:textColorHint="#000"
+        android:layout_height="40dp"
+        android:id="@+id/editText27"
+        android:layout_below="@+id/editText26"
+        android:layout_alignLeft="@+id/spinner7"
+        android:layout_alignStart="@+id/spinner7" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/spinner6"
+        android:layout_alignLeft="@+id/editText29"
+        android:layout_alignRight="@+id/spinner6"
+        android:layout_alignStart="@+id/editText29"
+        android:layout_below="@+id/editText25"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:textColorLink="#000"
+        android:id="@+id/editText29"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText25"
+        android:layout_alignLeft="@+id/editText25"
+        android:layout_alignRight="@+id/editText25"
+        android:layout_alignStart="@+id/editText25"
+        android:layout_below="@+id/spinner4"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:textColorHint="#000"
+        android:textCursorDrawable="@null"
+        android:textColor="#000000"
+        android:hint="Experience"
+        android:inputType="numberSigned" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/spinner"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner" />
+
+    <Spinner
+        android:id="@+id/spinner6"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/spinner"
+        android:layout_alignLeft="@+id/editText29"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignStart="@+id/editText29"
+        android:layout_below="@+id/editText29"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/spinner7"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/spinner6"
+        android:layout_alignLeft="@+id/spinner6"
+        android:layout_alignRight="@+id/spinner6"
+        android:layout_alignStart="@+id/spinner6"
+        android:layout_below="@+id/spinner6"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/editText26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:textColorLink="#000"
+        android:hint="Role"
+        android:textColorHint="#000"
+        android:textCursorDrawable="@null"
+        android:textColor="#000000"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/spinner7"
+        android:layout_alignRight="@+id/spinner7"
+        android:layout_alignEnd="@+id/spinner7"
+        android:layout_alignLeft="@+id/editText27"
+        android:layout_alignStart="@+id/editText27" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/editText27"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

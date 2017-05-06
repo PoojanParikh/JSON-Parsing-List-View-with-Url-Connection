@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.nishi.jobwatch.Register_Recruiter2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOBWATCH"
+            android:id="@+id/textview"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:textStyle="italic"
+            android:layout_marginStart="12dp" />
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Address"
+            android:inputType="textMultiLine" />
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Location"
+            android:inputType="textPersonName"
+/>
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Postal Code"
+            android:inputType="textPostalAddress" />
+
+        <!--<Spinner-->
+            <!--android:id="@+id/editText5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/editText6"-->
+
+            <!--android:layout_alignLeft="@+id/editText6"-->
+            <!--android:layout_alignRight="@+id/editText6"-->
+            <!--android:layout_alignStart="@+id/editText6"-->
+            <!--android:layout_below="@+id/editText4"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:spinnerMode="dialog" />-->
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Number of Employee"
+            android:inputType="phone"
+/>
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Year Established"
+            android:inputType="phone" />
+
+
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Vision"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/editText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mission"
+            android:inputType="textMultiLine" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableTint="@color/colorPrimary"
+                android:id="@+id/editText17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Upload Logo"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_upload_black_24px"
+                android:id="@+id/img"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/plcaholder"
+                android:id="@+id/img1"
+                />
+
+
+            <!--<ImageView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:src="@drawable/plcaholder"-->
+                <!--android:id="@+id/img1" />-->
+        </LinearLayout>
+
+        <CheckBox
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="I agree to the terms and conditions"
+           />
+
+        <Button
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:id="@+id/submit_recruiter_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBox"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="Submit" />
+
+
+
+    </LinearLayout>
+</ScrollView>

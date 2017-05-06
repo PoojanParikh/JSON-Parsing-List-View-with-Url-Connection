@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.nishi.jobwatch.Login"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal"
+        android:text="JOBWATCH"
+        android:textColor="@color/colorPrimary"
+        android:textSize="50sp"
+        android:textStyle="italic" />
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+            android:id="@+id/ll"
+                android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+                <ImageView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail_outline_black_24dp"
+                    android:tint="@color/colorPrimary" />
+                <EditText
+                    android:layout_marginTop="30dp"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/editText"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/colorPrimary" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+         android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:text="Submit"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_below="@+id/ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Enter The Registered Email ID:"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            android:id="@+id/textView"
+            android:layout_above="@+id/ll"
+            android:layout_alignRight="@+id/ll"
+            android:layout_alignEnd="@+id/ll" />
+
+
+    </RelativeLayout>
+

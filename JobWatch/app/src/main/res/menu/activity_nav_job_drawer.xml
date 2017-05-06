@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Jobs">
+        <menu>
+            <item
+                android:id="@+id/nav_search"
+                android:icon="@drawable/ic_search_black_24dp"
+                android:title="Search Jobs" />
+            <item
+                android:id="@+id/nav_save"
+                android:icon="@drawable/ic_save_black_24dp"
+                android:title="Saved Jobs" />
+            <item
+                android:id="@+id/nav_applyjob"
+                android:icon="@drawable/ic_star_border_black_24dp"
+                android:title="Applied Jobs" />
+        </menu>
+    </item>
+    <item android:title="Tests">
+        <menu>
+            <item
+                android:id="@+id/nav_viewresult"
+                android:icon="@drawable/ic_pageview_black_24dp"
+                android:title="View Previous Tests" />
+            <item
+                android:id="@+id/nav_testzone"
+                android:icon="@drawable/ic_assignment_black_24dp"
+                android:title="Test Zone" />
+            <item
+                android:id="@+id/nav_testresult"
+                android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+                android:title="Test Result" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_recruiteraction"
+            android:title="Recruiter Actions"
+            android:icon="@drawable/ic_speaker_notes_black_24dp" ></item>
+        <item
+            android:id="@+id/nav_setting"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings_black_24dp"></item>
+        <item
+            android:id="@+id/nav_careerservice"
+            android:title="Career Services"
+            android:icon="@drawable/ic_card_travel_black_24px"></item>
+        <item
+            android:id="@+id/nav_email"
+            android:title="Email Us"
+            android:icon="@drawable/ic_email_black_24dp"></item>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Log Out"
+            android:icon="@drawable/ic_settings_power_black_24dp">
+        </item></group>
+</menu>

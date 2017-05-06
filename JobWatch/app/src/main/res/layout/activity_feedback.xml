@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nishi.jobwatch.Feedback">
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal"
+        android:text="JOBWATCH"
+        android:textColor="@color/colorPrimary"
+        android:textSize="50sp"
+        android:textStyle="italic" />
+    <EditText
+        android:id="@+id/editText1"
+        android:background="@drawable/circle"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:lines="10"
+        android:hint="Your Message"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+
+        android:minLines="5"
+        android:gravity="top|left"
+        android:maxLines="15"
+        android:layout_below="@+id/login_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:textColor="#fff"
+    android:text="Submit"
+    android:layout_below="@+id/editText1"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="44dp" />
+
+</RelativeLayout>

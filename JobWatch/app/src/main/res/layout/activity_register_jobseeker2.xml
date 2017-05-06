@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_jobseeker2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nishi.jobwatch.Register_jobseeker2">
+
+
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/keyskill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Keyskills"
+        />
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Education"
+        />
+
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gender"
+        />
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="experience"
+        />
+
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/ten_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="10th %"
+        />
+
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/twelth_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="12th %"
+        />
+
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Degree"
+        />
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/degree_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Degree %"
+        />
+
+    <EditText
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/extra_achivement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Extra Achivement "
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTint="@color/colorPrimary"
+            android:id="@+id/editText17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Upload Resume"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_file_upload_black_24px"
+            android:id="@+id/img"
+            />
+
+     
+
+        <!--<ImageView-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/plcaholder"-->
+        <!--android:id="@+id/img1" />-->
+    </LinearLayout>
+
+    <CheckBox
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/checkBox_jobseeker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="I agree to the terms and conditions"
+        />
+    <Button
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:id="@+id/submit_jobseeker_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="Submit" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nishi.jobwatch.Register_jobseeker1">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOBWATCH"
+        android:textStyle="italic"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView3" />
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/editText18"
+        android:layout_alignStart="@+id/editText18" />
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText19"
+        android:layout_alignStart="@+id/editText19" />
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/editText18"
+        android:ems="10"
+
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText18"
+        android:layout_alignRight="@+id/editText18"
+        android:layout_below="@+id/editText19"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone" />
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/editText20"
+        android:layout_alignLeft="@+id/editText20"
+        android:layout_alignStart="@+id/editText20" />
+
+    <EditText
+        android:id="@+id/editText22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText21"
+        android:layout_alignStart="@+id/editText21"
+        android:layout_below="@+id/editText21"
+        android:ems="10"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textCursorDrawable="@null"
+        android:id="@+id/editText23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText22"
+        android:layout_alignStart="@+id/editText22"
+        android:layout_below="@+id/editText22"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/industry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/editText23"
+        android:layout_alignLeft="@+id/editText23"
+        android:layout_alignStart="@+id/editText23"
+        android:layout_alignRight="@+id/editText23"
+        android:layout_alignEnd="@+id/editText23" />
+
+    <Button
+
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:id="@+id/btn_jobseeker_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="next"
+        android:layout_below="@+id/jobtype"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/jobtype"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/role"
+        android:layout_alignLeft="@+id/role"
+        android:layout_alignStart="@+id/role"
+        android:layout_alignRight="@+id/role"
+        android:layout_alignEnd="@+id/role" />
+
+    <Spinner
+        android:id="@+id/role"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/industry"
+        android:layout_alignLeft="@+id/industry"
+        android:layout_alignStart="@+id/industry"
+        android:layout_alignRight="@+id/industry"
+        android:layout_alignEnd="@+id/industry" />
+
+</RelativeLayout>
+</ScrollView>
