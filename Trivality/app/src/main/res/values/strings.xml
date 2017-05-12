@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Trivality</string>
+    <string name="str_next">Next</string>
+    <string name="title_activity_result">Results!!!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+</resources>
